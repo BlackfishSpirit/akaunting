@@ -1,0 +1,50 @@
+{
+  "project": "Bookkeeper (Akaunting)",
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Fix asset path prefix in Blade templates (remove ./public/ from asset() calls)",
+      "status": "planned",
+      "priority": "high",
+      "description": "All Blade templates use asset('public/...') instead of asset('...'). This causes assets to resolve to public/public/... which breaks static file serving. Currently worked around with a symlink from public/public -> public. Fix: remove 'public/' prefix from all asset() calls in resources/views/.",
+      "files": [
+        "resources/views/components/layouts/wizard/scripts.blade.php",
+        "resources/views/components/layouts/admin/scripts.blade.php",
+        "resources/views/components/layouts/portal/scripts.blade.php",
+        "resources/views/components/layouts/print/scripts.blade.php"
+      ],
+      "created": "2026-03-20"
+    },
+    {
+      "id": "task_002",
+      "title": "Fix PHP 8.4 nullable parameter deprecations in app/ code",
+      "status": "planned",
+      "priority": "medium",
+      "description": "PHP 8.4 requires explicit ?Type nullable syntax instead of implicit nullable defaults. Fix files in app/ directory only (not vendor/). Currently suppressed via error_reporting in php.ini.",
+      "files": [
+        "app/Utilities/helpers.php (lines 408, 421)",
+        "app/Models/Document/Document.php (lines 275, 286)"
+      ],
+      "created": "2026-03-20"
+    },
+    {
+      "id": "task_003",
+      "title": "Fix Vue 'component' not defined in wizard Company.vue",
+      "status": "planned",
+      "priority": "low",
+      "description": "Vue warn: Property or method 'component' is not defined on the instance but referenced during render in resources/assets/js/views/wizard/Company.vue. Causes wizard page to render blank.",
+      "files": [
+        "resources/assets/js/views/wizard/Company.vue"
+      ],
+      "created": "2026-03-20"
+    },
+    {
+      "id": "task_004",
+      "title": "Fix serviceworker.js and manifest.json 500 errors",
+      "status": "planned",
+      "priority": "low",
+      "description": "PWA routes for serviceworker.js and manifest.json return 500 errors. Not critical for local development but shows errors in browser console.",
+      "created": "2026-03-20"
+    }
+  ]
+}
