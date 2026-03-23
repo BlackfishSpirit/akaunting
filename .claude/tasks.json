@@ -53,10 +53,11 @@
     {
       "id": "task_004",
       "title": "Fix serviceworker.js and manifest.json 500 errors",
-      "status": "planned",
+      "status": "completed",
       "priority": "low",
-      "description": "PWA routes for serviceworker.js and manifest.json return 500 errors. Not critical for local development but shows errors in browser console.",
-      "created": "2026-03-20"
+      "description": "Copied serviceworker.js and manifest.json to public/ directory. Files were only in project root, which works with Apache .htaccess rewrites but not with artisan serve. Originals kept in root for Apache compatibility.",
+      "created": "2026-03-20",
+      "completed": "2026-03-23"
     }
   ]
 }
