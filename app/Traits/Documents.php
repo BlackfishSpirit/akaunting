@@ -288,19 +288,19 @@ trait Documents
             [
                 'id' => 'default',
                 'name' => trans('settings.invoice.default'),
-                'image' => asset('public/img/invoice_templates/default.png'),
+                'image' => asset('img/invoice_templates/default.png'),
                 'template' => 'default',
             ],
             [
                 'id' => 'classic',
                 'name' => trans('settings.invoice.classic'),
-                'image' => asset('public/img/invoice_templates/classic.png'),
+                'image' => asset('img/invoice_templates/classic.png'),
                 'template' => 'classic',
             ],
             [
                 'id' => 'modern',
                 'name' => trans('settings.invoice.modern'),
-                'image' => asset('public/img/invoice_templates/modern.png'),
+                'image' => asset('img/invoice_templates/modern.png'),
                 'template' => 'modern',
             ],
         ]);
