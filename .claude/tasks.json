@@ -58,6 +58,18 @@
       "description": "Copied serviceworker.js and manifest.json to public/ directory. Files were only in project root, which works with Apache .htaccess rewrites but not with artisan serve. Originals kept in root for Apache compatibility.",
       "created": "2026-03-20",
       "completed": "2026-03-23"
+    },
+    {
+      "id": "task_005",
+      "title": "Create /start-bookkeeping-services slash command for dev environment startup",
+      "status": "completed",
+      "priority": "high",
+      "description": "Create a Claude Code skill at .claude/skills/start-bookkeeping-services/SKILL.md that starts all services needed for local dev. Steps: 1) Start Docker MySQL container (docker start akaunting-db, or docker run if not exists), 2) Wait for MySQL to accept connections, 3) Start php artisan serve in background, 4) Verify both services are healthy, 5) Report URLs and status. Should use disable-model-invocation: true since it has side effects.",
+      "files": [
+        ".claude/skills/start-bookkeeping-services/SKILL.md"
+      ],
+      "created": "2026-03-23",
+      "completed": "2026-03-23"
     }
   ]
 }
