@@ -4,28 +4,39 @@
     {
       "id": "task_001",
       "title": "Fix asset path prefix in Blade templates (remove ./public/ from asset() calls)",
-      "status": "planned",
+      "status": "completed",
       "priority": "high",
-      "description": "All Blade templates use asset('public/...') instead of asset('...'). This causes assets to resolve to public/public/... which breaks static file serving. Currently worked around with a symlink from public/public -> public. Fix: remove 'public/' prefix from all asset() calls in resources/views/.",
+      "description": "Removed redundant public/ prefix from all asset() calls. Fixed 147 occurrences across 59 files (57 Blade templates + 2 PHP files). Removed public/public symlink workaround.",
       "files": [
-        "resources/views/components/layouts/wizard/scripts.blade.php",
-        "resources/views/components/layouts/admin/scripts.blade.php",
-        "resources/views/components/layouts/portal/scripts.blade.php",
-        "resources/views/components/layouts/print/scripts.blade.php"
+        "resources/views/ (57 Blade files)",
+        "app/Traits/Documents.php",
+        "app/View/Components/SearchString.php"
       ],
-      "created": "2026-03-20"
+      "created": "2026-03-20",
+      "completed": "2026-03-23"
     },
     {
       "id": "task_002",
       "title": "Fix PHP 8.4 nullable parameter deprecations in app/ code",
-      "status": "planned",
+      "status": "completed",
       "priority": "medium",
-      "description": "PHP 8.4 requires explicit ?Type nullable syntax instead of implicit nullable defaults. Fix files in app/ directory only (not vendor/). Currently suppressed via error_reporting in php.ini.",
+      "description": "Added explicit ?Type nullable syntax to all typed parameters defaulting to null. Fixed 19 parameters across 12 PHP files in app/.",
       "files": [
-        "app/Utilities/helpers.php (lines 408, 421)",
-        "app/Models/Document/Document.php (lines 275, 286)"
+        "app/Utilities/helpers.php",
+        "app/Models/Document/Document.php",
+        "app/Abstracts/View/Components/Form.php",
+        "app/Abstracts/View/Components/Transactions/Index.php",
+        "app/Abstracts/View/Components/Documents/Index.php",
+        "app/Notifications/Sale/Invoice.php",
+        "app/Notifications/Purchase/Bill.php",
+        "app/Notifications/Portal/PaymentReceived.php",
+        "app/Notifications/Banking/Transaction.php",
+        "app/View/Components/Tips.php",
+        "app/View/Components/Script/Exceptions/Trackers.php",
+        "app/View/Components/PaymentMethod.php"
       ],
-      "created": "2026-03-20"
+      "created": "2026-03-20",
+      "completed": "2026-03-23"
     },
     {
       "id": "task_003",
