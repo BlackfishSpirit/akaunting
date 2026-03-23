@@ -11,6 +11,7 @@ export default {
                 default_currency: 0,
                 enabled: 1
             },
+            component: '',
             error_field: {},
             create_tax_text: true,
             button_loading: false,

@@ -41,13 +41,14 @@
     {
       "id": "task_003",
       "title": "Fix Vue 'component' not defined in wizard Company.vue",
-      "status": "planned",
+      "status": "completed",
       "priority": "low",
-      "description": "Vue warn: Property or method 'component' is not defined on the instance but referenced during render in resources/assets/js/views/wizard/Company.vue. Causes wizard page to render blank.",
+      "description": "Added missing 'component' data property to wizardAction mixin. Both Company.vue and Currencies.vue reference it in templates and the mixin sets it in onEjetItem(), but it was never declared in data().",
       "files": [
-        "resources/assets/js/views/wizard/Company.vue"
+        "resources/assets/js/mixins/wizardAction.js"
       ],
-      "created": "2026-03-20"
+      "created": "2026-03-20",
+      "completed": "2026-03-23"
     },
     {
       "id": "task_004",
